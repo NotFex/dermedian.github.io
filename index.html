@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gehaltsvergleich</title>
-    <!-- Bootstrap CSS über CDN einbinden -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gehaltsvergleich | DerMedian.de - Vergleiche dein Gehalt mit dem Bundes- und Länderdurchschnitt</title>
+        <!-- Bootstrap CSS über CDN einbinden -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <!-- Meta-Beschreibung für SEO -->
+        <meta name="description" content="Vergleiche dein Gehalt mit dem Bundes- und Länderdurchschnitt auf DerMedian.de. Einfach Bundesland auswählen und Gehalt eingeben.">
+        <meta name="keywords" content="Gehaltsvergleich, Durchschnittsgehalt, Deutscher Durchschnitt Gehalt, Gehaltsrechner, Gehalt berechnen, Bruttogehalt, Median Gehalt, Gehaltsunterschiede">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="DerMedian.de">
+        <meta name="language" content="Deutsch">
+        <meta name="revisit-after" content="7 days">
+        <meta name="distribution" content="global">
+        <meta name="geo.region" content="DE">
+        <meta name="geo.placename" content="Berlin">
+        <meta property="og:title" content="Gehaltsvergleich | DerMedian.de - Vergleiche dein Gehalt mit dem Bundes- und Länderdurchschnitt">
+        <meta property="og:description" content="Vergleiche dein Gehalt mit dem Bundes- und Länderdurchschnitt auf DerMedian.de. Einfach Bundesland auswählen und Gehalt eingeben.">
+        <meta property="og:url" content="https://www.dermedian.de">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="de_DE">
+        <meta name="twitter:title" content="Gehaltsvergleich | DerMedian.de - Vergleiche dein Gehalt mit dem Bundes- und Länderdurchschnitt">
+        <meta name="twitter:description" content="Vergleiche dein Gehalt mit dem Bundes- und Länderdurchschnitt auf DerMedian.de. Einfach Bundesland auswählen und Gehalt eingeben.">
+        <link rel="canonical" href="https://www.dermedian.de">
+    
+    </head>    
+
 <body>
 
     <header>
         <div class="navbar navbar-dark bg-dark shadow-sm">
           <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand d-flex align-items-center">
-              DerMedian.de
+              DerMedian.de | Wie gut ist mein Gehalt?
             </a>
             <a href="mailto:felix.burwitzprivat@gmail.com?subject=Interesse%20an%20deiner%20Domain%3A%20DerMedian.de&body=Hallo%20...%0D%0A%0D%0A-%3E%20Kaufangebot%3A%0D%0A%0D%0ABeste%20Gr%C3%BC%C3%9Fe...">Interesse an dieser Domain?</a>
           </div>
@@ -23,6 +44,7 @@
     <br/>
     <br/>
     <br/>
+
     <div class="container">
         <h1>Gehaltsvergleich</h1>
         <form>
@@ -53,14 +75,15 @@
             </div>
             <button type="button" class="btn btn-primary" onclick="vergleichen()">Vergleichen</button>
         </form>
+        <br>
         <div class="result">
             <h2>Ergebnisse</h2>
             <p>Dein Gehalt beträgt mntl.: <span id="userGehalt">...</span>€</p>
             <p>Das Median-Gehalt in deinem Bundesland beträgt: <span id="medianBundesland">...</span>€ <span id="bundeslandVergleich"></span></p> 
-            <p>In Deutschland beträgt der Median: <span id="medianDeutschland">...</span>€</p>
-            <!-- <p>Bist du damit über dem : </p>
-            <p>Du bist über dem Median Gehalt in Deutschland: <span id="deutschlandVergleich">-</span></p> -->
+            <p>In Deutschland beträgt der Median: <span id="medianDeutschland">...</span>€ -- <span id="deutschlandVergleich"></span></p> 
         </div>
+        <p style="color: grey;">Quelle @Bundesagentur für Arbeit</p>
+        <a href="imprint.html"> Impressum</a>
     </div>
 
 
@@ -119,5 +142,8 @@
             return medianValues[selectedBundesland] || 0; 
         }
     </script>
+
+    
+
 </body>
 </html>
