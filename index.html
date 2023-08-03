@@ -3,16 +3,6 @@
 
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3363213442240398" crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-784PGJ7V5J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-784PGJ7V5J');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gehaltsvergleich | DerMedian.de - Vergleiche dein Gehalt mit Durchschnitt
@@ -41,170 +31,111 @@
 </head>
 
 <body>
-    <!-- Cookie Banner -->
-    <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
-        🍪 Wie benutzen GoogleAdsense und Analytics, dies beinhaltet Cookies!
-        <a href="https://www.cookiesandyou.com/" target="blank">Über Cookies.</a> ||
-        <a href="schnell-geliefert.de/impressum.html" target="blank">Impressum und Datenschutz</a> ||
-        <a href="https://www.google.com/adsense/tc/2018/Germany.html" target="blank">über AdSense</a>
-        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="window.cb_hideCookieBanner()">
-                Verstanden.
-        </button>
-    </div>
-    <!-- End of Cookie Banner -->
-
     <header>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                        DerMedian.de | Wie gut ist mein Gehalt?
-                    </a>
-                <a href="mailto:felix.burwitzprivat@gmail.com?subject=Interesse%20an%20deiner%20Domain%3A%20DerMedian.de&body=Hallo%20...%0D%0A%0D%0A-%3E%20Kaufangebot%3A%0D%0A%0D%0ABeste%20Gr%C3%BC%C3%9Fe...">Interesse
-                        an dieser Domain?</a>
-            </div>
-        </div>
+        <h1>Der DerMedian.de Gehaltsvergleich</h1>
     </header>
-
-    <br />
-    <br />
-    <br />
-
-    <div class="container">
-        <h1>Gehaltsvergleich</h1>
-        <form>
+    <div class="container top">
+        <div class="container">
+            <h1>Gehaltsvergleich</h1>
             <div class="mb-3">
-                <label for="bundesland">Dein Bundesland</label>
-                <select class="form-select" id="bundesland">
-                        <option value="Baden-Württemberg">Baden-Württemberg</option>
-                        <option value="Bayern">Bayern</option>
-                        <option value="Berlin">Berlin</option>
-                        <option value="Brandenburg">Brandenburg</option>
-                        <option value="Bremen">Bremen</option>
-                        <option value="Hamburg">Hamburg</option>
-                        <option value="Hessen">Hessen</option>
-                        <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
-                        <option value="Niedersachsen">Niedersachsen</option>
-                        <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
-                        <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
-                        <option value="Saarland">Saarland</option>
-                        <option value="Sachsen">Sachsen</option>
-                        <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
-                        <option value="Schleswig-Holstein">Schleswig-Holstein</option>
-                        <option value="Thüringen">Thüringen</option>
-                    </select>
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="gehalt" placeholder="2600">
+                            <label for="gehalt">Bruttomonatsgehalt</label>
+                        </div>
+                    </div>
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <select class="form-select" id="bundesland" aria-label="Bundesland Select">
+                                    <option value="Baden-Württemberg">Baden-Württemberg</option>
+                                    <option value="Bayern">Bayern</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="Brandenburg">Brandenburg</option>
+                                    <option value="Bremen">Bremen</option>
+                                    <option value="Hamburg">Hamburg</option>
+                                    <option value="Hessen">Hessen</option>
+                                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                                    <option value="Niedersachsen">Niedersachsen</option>
+                                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                                    <option value="Saarland">Saarland</option>
+                                    <option value="Sachsen">Sachsen</option>
+                                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                                    <option value="Schleswig-Holstein">Schleswig-Holstein</option>
+                                    <option value="Thüringen">Thüringen</option>
+                                </select>
+                                <label for="bundesland">Bundesland</label>
+                            </div>
+                        </div>
+                </div>         
+                <div class="d-grid">
+                    <button class="btn btn-primary vglbtn" type="button" onclick="vergleichen()">Vergleichen</button>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="gehalt">Dein Bruttogehalt pro Monat</label>
-                <input type="number" class="form-control" id="gehalt" placeholder="Dein Gehalt">
-            </div>
-            <button type="button" class="btn btn-primary" onclick="vergleichen()">Vergleichen</button>
-        </form>
-        <br>
-        <div class="result">
-            <h2>Ergebnisse</h2>
-            <p>Dein Gehalt beträgt mntl.: <span id="userGehalt">...</span>€</p>
-            <p>Das Median-Gehalt in deinem Bundesland beträgt: <span id="medianBundesland">...</span>€ <span id="bundeslandVergleich"></span></p>
-            <p>In Deutschland beträgt der Median: <span id="medianDeutschland">...</span>€ -- <span id="deutschlandVergleich"></span></p>
         </div>
-        <p style="color: grey;">Quelle @Bundesagentur für Arbeit</p>
-
-        <div>
-            <br><br><br>
+    </div>
+    <section>
+        <div class="container result">
+            <div class="table-responsive">
+                <table class="table  table-bordered table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <td>Dein Burttogehalt beträgt:</td>
+                            <td><span id="userGehalt"></span>€</td>
+                            <td><span id="dvgl"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Der Median in deinem Bundesland beträgt:</td>
+                            <td><span id="medianBundesland"></span>€</td>
+                            <td><span id="bvgl"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container context">
             <h5>Gehaltsvergleich: Entdecken Sie, wie Ihr Bruttoeinkommen mit dem Bundes- und Länderdurchschnitt korreliert</h1>
-
                 <p>Willkommen auf unserer Webseite, Ihrem zuverlässigen Gehaltsvergleichs-Tool! Hier haben Sie die Möglichkeit, Ihr Bruttogehalt in Deutschland mit den durchschnittlichen Einkommen auf Bundes- und Länderebene zu vergleichen. Unsere Daten
                     basieren auf verlässlichen Informationen der Bundesagentur für Arbeit, sodass Sie stets auf aktuelle und präzise Zahlen vertrauen können.</p>
-
                 <strong>Warum ist ein Gehaltsvergleich wichtig?</strong>
                 <p>Ob Sie sich beruflich neu orientieren oder einfach nur Ihre aktuelle Gehaltssituation bewerten möchten – ein Gehaltsvergleich kann äußerst aufschlussreich sein. Unser Tool ermöglicht es Ihnen, Ihr Bruttogehalt mit dem Durchschnittseinkommen
                     in Ihrer Region oder in ganz Deutschland zu vergleichen. So erhalten Sie wertvolle Erkenntnisse darüber, wie Ihre Vergütung im Verhältnis zu anderen steht und ob gegebenenfalls Optimierungsbedarf besteht.
                 </p>
-
                 <strong>So funktioniert unser Gehaltsvergleich:</strong>
                 <p>Unsere Webseite ist benutzerfreundlich gestaltet, sodass Sie innerhalb weniger Klicks Ihr Gehalt eingeben und den Vergleich starten können.</p>
-
                 <strong>Bundes- und Ländervergleich:</strong>
                 <p>Sie haben die Wahl, Ihr Gehalt entweder mit dem Bundesdurchschnitt oder dem Durchschnitt Ihrer gewünschten Region zu vergleichen.</p>
-
                 <strong>Aktuelle Daten:</strong>
                 <p>Wir aktualisieren unsere Daten regelmäßig, um sicherzustellen, dass Sie stets auf die neuesten Gehaltsinformationen zugreifen können.</p>
-
                 <strong>Datenschutz:</strong>
                 <p>Ihre Privatsphäre liegt uns am Herzen. Alle eingegebenen Gehaltsdaten werden nicht gespeichert und entsprechend nicht an Dritte weitergegeben. Die Verarbeitung erfolgt Lokal!</p>
-
                 <strong>Warum diese Website?</strong>
                 <p>Zuverlässige Daten: Unsere Informationen stammen direkt von der Bundesagentur für Arbeit, wodurch Sie auf vertrauenswürdige und genaue Zahlen zugreifen können.</p>
-
                 <strong>Transparente Ergebnisse:</strong>
                 <p>Unser Tool liefert Ihnen klare und leicht verständliche Ergebnisse, die Ihnen sofort zeigen, wie Ihr Gehalt im Vergleich abschneidet.</p>
-
                 <strong>Kostenlos und unverbindlich: Unser Gehaltsvergleich ist
                     kostenlos und ohne Verpflichtungen nutzbar.</strong><br><br>
-
                 <strong>Fazit:</strong>
                 <p>Nutzen Sie die Möglichkeit, Ihr Bruttogehalt mit dem Bundes- und Länderdurchschnitt zu vergleichen, um wertvolle Erkenntnisse über Ihre finanzielle Situation zu gewinnen. Unser Gehaltsvergleichs-Tool basiert auf aktuellen Daten der Bundesagentur
                     für Arbeit und bietet Ihnen Transparenz und Zuverlässigkeit. Vertrauen Sie auf unsere Plattform und machen Sie fundierte Entscheidungen für Ihre berufliche Zukunft. Starten Sie jetzt Ihren Gehaltsvergleich und erfahren Sie, wie Sie
                     im Vergleich zu anderen Arbeitnehmern abschneiden!
                 </p>
-                <a href="schnell-geliefert.de/impressum.html"> Impressum</a>
-
+                <a href="https://www.schnell-geliefert.de/impressum.html"> Impressum [externer Link]</a>
         </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 DerMedian.de - Alle Rechte vorbehalten</p>
+        <p><a href="https://www.schnell-geliefert.de/impressum.html" target="_blank">Impressum [Externer Link]</a></p>
+    </footer>
     </div>
 
-    <script src="js.js"></script>
+    <!-- Rechnungsscript für den Gehaltsvergleich-->
+    <script src="calc.js"></script>
     <!-- Bootstrap JS über CDN einbinden -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        function vergleichen() {
-            const selectedBundesland = document.getElementById('bundesland').value;
-            const gehalt = parseFloat(document.getElementById('gehalt').value);
-
-            // Hier könntest du eine Funktion einfügen, um den Median für das ausgewählte Bundesland und ganz Deutschland zu erhalten
-            const medianBundesland = getMedian(selectedBundesland); // Funktion zum Abrufen des Medianwerts für das ausgewählte Bundesland
-            const medianDeutschland = 3646; // Beispielwert - ersetze diesen Wert durch die echten Daten
-
-            document.getElementById('userGehalt').innerText = gehalt.toFixed(2);
-            document.getElementById('medianBundesland').innerText = medianBundesland.toFixed(2);
-            document.getElementById('medianDeutschland').innerText = medianDeutschland.toFixed(2);
-
-            if (gehalt >= medianBundesland) {
-                document.getElementById('bundeslandVergleich').innerText = '-- mit diesem Gehalt verdienst du "überdurchschnittlich."';
-            } else {
-                document.getElementById('bundeslandVergleich').innerText = '-- mit diesem Gehalt verdienst du "unterdurchschnittlich."';
-            }
-
-            if (gehalt >= medianDeutschland) {
-                document.getElementById('deutschlandVergleich').innerText = 'Damit bist du über dem Bundes-Durchschnitt!';
-            } else {
-                document.getElementById('deutschlandVergleich').innerText = 'Damit bist du unter dem Durchschnitt.';
-            }
-        }
-
-        function getMedian(selectedBundesland) { // Quelle ist BafA 2022
-            const medianValues = {
-                'Baden-Württemberg': 3977,
-                'Bayern': 3792,
-                'Berlin': 3806,
-                'Brandenburg': 3011,
-                'Bremen': 3781,
-                'Hamburg': 4127,
-                'Hessen': 3938,
-                'Mecklenburg-Vorpommern': 2935,
-                'Niedersachsen': 3488,
-                'Nordrhein-Westfalen': 3687,
-                'Rheinland-Pfalz': 3570,
-                'Saarland': 3621,
-                'Sachsen': 3012,
-                'Sachsen-Anhalt': 2993,
-                'Schleswig-Holstein': 3385,
-                'Thüringen': 2945
-            };
-
-            return medianValues[selectedBundesland] || 0;
-        }
-    </script>
-
 </body>
 
 </html>
